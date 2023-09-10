@@ -24,7 +24,7 @@ def load_video(video_path, rotate=False, natural_colors=True):
         stream.read(video[frame_idx])
         
         if natural_colors:
-            bgr_to_rgb(video[frame_idx])
+            video[frame_idx] = bgr_to_rgb(video[frame_idx])
         
         if rotate:
             np.rot90(video[frame_idx])
