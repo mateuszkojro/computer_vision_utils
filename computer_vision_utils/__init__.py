@@ -44,7 +44,6 @@ def iter_frames(video_path):
         yield frame
 
     stream.release()
-    raise StopIteration
 
 
 def save_video(path, data, format="XVID", fps=30):
